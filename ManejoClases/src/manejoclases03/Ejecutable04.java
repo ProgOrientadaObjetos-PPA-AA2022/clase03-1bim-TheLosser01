@@ -1,8 +1,5 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
+import java.util.Locale;
+import java.util.Scanner;
 package manejoclases03;
 
 /**
@@ -12,14 +9,20 @@ package manejoclases03;
 public class Ejecutable04 {
     
     public static void main(String[] args) {
-    
+        
+        Scanner entrada = new Scanner(System.in);
+        entrada.useLocale(Locale.US);
+        
         Hospital h1 = new Hospital();
         Hospital h2 = new Hospital();
         Hospital h3 = new Hospital();
         
-        double valor1 = 10000;
-        double valor2 = 20000;
-        double valor3 = 30000;
+        System.out.println("Ingrese el valor de presupuesto del hospital");
+        double valor1 = entrada.nextDouble();
+        System.out.println("Ingrese el valor de presupuesto del hospital");
+        double valor2 = entrada.nextDouble();
+        System.out.println("Ingrese el valor de presupuesto del hospital");
+        double valor3 = entrada.nextDouble();
         
         h1.establecerPresupuesto(valor1);
         h2.establecerPresupuesto(valor2);
